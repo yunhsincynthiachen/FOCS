@@ -76,16 +76,10 @@ let coprimes (n) =
 (* Question 2 *)
 
 (* Append *)
-let rec reverse (list2,new_list) =
-   match list2 with [] -> new_list
-      | first1::rest1 -> reverse(rest1,first1::new_list)
-
-let rec append_helper (xs,ys) = 
-   match xs with [] -> ys
-      | first::rest -> append_helper(rest,first::ys)
-
-let append (xs,ys) =
-   append_helper(reverse(xs,[]),ys)
+let rec append (xs,ys) =
+   match xs with
+       [] -> ys
+      | first::rest -> first::append(rest,ys)
 
 (* Flatten *)
 let rec flatten_helper (xss, new_list) = 
@@ -107,6 +101,10 @@ let rec last (xs) =
       | first::rest -> last(rest)
 
 (* separate *)
+let rec reverse (list2,new_list) =
+   match list2 with [] -> new_list
+      | first1::rest1 -> reverse(rest1,first1::new_list)
+
 let get_first_of_tuple ((xs,ys)) = xs
 
 let get_second_of_tupe ((xs,ys)) = ys

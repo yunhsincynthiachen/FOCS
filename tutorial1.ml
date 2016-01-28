@@ -23,3 +23,8 @@ let rec compress lst =
 		| [x] -> [x]
 		| [x;y] -> if x=y then [x] else [x;y]
 		| x1::x2::rest -> if x1 = x2 then compress(x2::rest) else x1::compress(x2::rest)
+
+let rec append (list1,list2) =
+	match list1 with
+		 [] -> list2
+		| first::rest -> first::append(rest,list2)
