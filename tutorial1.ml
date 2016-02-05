@@ -28,3 +28,10 @@ let rec append (list1,list2) =
 	match list1 with
 		 [] -> list2
 		| first::rest -> first::append(rest,list2)
+
+(* Separate without helper *)
+let rec separate (list) = 
+	match list with 
+	| [] -> ([],[])
+	| (a,b)::t -> (match separate(t) with 
+					| (l1,l2) -> (a::l1,b::l2))
