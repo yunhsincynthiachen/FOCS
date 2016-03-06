@@ -6,8 +6,8 @@ Name: Cynthia Chen
 
 Email: yun-hsin.chen@students.olin.edu
 
-Remarks, if any: Sidd helped me figure out how to do all_strings without a helper function. I have included my helper 
-function version in my code also.
+Remarks, if any: Sidd helped me figure out how to do regex_d and all_strings without a helper function. 
+I have included my helper function version in my code also.
 
 *)
 
